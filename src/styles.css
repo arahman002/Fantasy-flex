@@ -770,6 +770,42 @@ footer {
   width: 100%;
   max-width: 370px;
 }
+.auth-options {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  margin: 22px 0;
+  background: #eaf0e4;
+  border-radius: 9px;
+}
+.auth-options button {
+  flex: 1;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  padding: 12px 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.auth-options button[aria-pressed="true"] {
+  background: white;
+  color: #236d4b;
+  box-shadow: 0 2px 5px #15392210;
+}
+.demo-account-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 760px) {
+  .demo-banner {
+    flex-wrap: wrap;
+  }
+  .demo-account-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
 .auth-card h2 {
   font-size: 30px;
   letter-spacing: -1px;
