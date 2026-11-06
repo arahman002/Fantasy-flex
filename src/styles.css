@@ -1181,3 +1181,130 @@ dt {
     transition: none !important;
   }
 }
+
+.live-scores {
+  margin: 0 0 36px;
+}
+.live-scores .section-heading {
+  margin-bottom: 10px;
+}
+.score-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.score-controls label {
+  font-size: 10px;
+  gap: 4px;
+}
+.score-controls select {
+  min-width: 100px;
+  padding: 9px 12px;
+  font-size: 12px;
+}
+.score-controls button {
+  padding: 11px;
+}
+.score-update {
+  font-size: 10px;
+  color: #75856d;
+  margin: 12px 0;
+}
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.score-card {
+  background: white;
+  border: 1px solid #e2e7dc;
+  border-radius: 10px;
+  padding: 18px;
+}
+.score-card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #7b8873;
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+.game-live {
+  color: #23734a;
+  font-weight: 700;
+}
+.score-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.score-team small {
+  font-size: 9px;
+  color: #829078;
+  margin-left: 8px;
+}
+.score-team strong {
+  font-size: 23px;
+}
+.score-leaders {
+  list-style: none;
+  padding: 12px 0 0;
+  margin: 15px 0 0;
+  border-top: 1px solid #e9ede4;
+}
+.score-leaders li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  line-height: 1.7;
+  padding: 3px 0;
+}
+.score-leaders strong {
+  font-weight: 500;
+  text-align: right;
+}
+.score-link,
+.score-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #437444;
+  margin-top: 15px;
+}
+.score-source {
+  font-size: 11px;
+}
+.score-empty {
+  padding: 25px;
+  border: 1px dashed #dce4d3;
+  border-radius: 9px;
+  font-size: 12px;
+  color: #75856d;
+}
+@media (max-width: 760px) {
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+  .live-scores .section-heading {
+    flex-direction: row;
+    align-items: center;
+  }
+  .live-scores h2 {
+    font-size: 16px;
+  }
+  .live-scores .section-heading p {
+    max-width: 180px;
+    line-height: 1.6;
+  }
+  .score-controls label {
+    font-size: 9px;
+  }
+  .score-controls select {
+    min-width: 75px;
+    padding: 8px;
+  }
+}
