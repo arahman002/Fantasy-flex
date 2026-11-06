@@ -230,6 +230,32 @@ export default function App() {
         <section className="auth-panel">
           <div className="auth-card">
             <span className="eyebrow">WELCOME TO FANTASY FLEX</span>
+            <div
+              className="auth-options"
+              role="group"
+              aria-label="Account options"
+            >
+              <button
+                type="button"
+                aria-pressed={authMode === "login"}
+                onClick={() => {
+                  setAuthMode("login");
+                  setMessage("");
+                }}
+              >
+                Sign in
+              </button>
+              <button
+                type="button"
+                aria-pressed={authMode === "signup"}
+                onClick={() => {
+                  setAuthMode("signup");
+                  setMessage("");
+                }}
+              >
+                Create account
+              </button>
+            </div>
             <h2>
               {authMode === "login"
                 ? "Back in the game."
@@ -238,7 +264,7 @@ export default function App() {
             <p>
               {authMode === "login"
                 ? "Sign in to your fantasy headquarters."
-                : "Create an account and bring your league together."}
+                : "Create your login with an email and password. Confirm your email to start saving leagues."}
             </p>
             <form onSubmit={authenticate}>
               <label>
@@ -398,9 +424,26 @@ export default function App() {
                 <ShieldCheck size={16} /> You’re exploring the demo. Changes
                 aren’t saved.
               </span>
-              <button onClick={() => setDemo(false)}>
-                Exit demo <ArrowRight size={15} />
-              </button>
+              <div className="demo-account-actions">
+                <button
+                  onClick={() => {
+                    setAuthMode("signup");
+                    setMessage("");
+                    setDemo(false);
+                  }}
+                >
+                  Create account <ArrowRight size={15} />
+                </button>
+                <button
+                  onClick={() => {
+                    setAuthMode("login");
+                    setMessage("");
+                    setDemo(false);
+                  }}
+                >
+                  Sign in
+                </button>
+              </div>
             </div>
           )}
           <div className="page-heading">
