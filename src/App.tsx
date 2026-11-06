@@ -17,6 +17,7 @@ import {
   Zap,
 } from "lucide-react";
 import { demoLeagues, supabase, validateLeague, type League } from "./lib";
+import LiveScores from "./LiveScores";
 
 export default function App() {
   const [session, setSession] = useState<Session | null>(null);
@@ -539,6 +540,7 @@ export default function App() {
               <small>Build it. Make it yours.</small>
             </article>
           </section>
+          <LiveScores />
           <section id="leagues" className="leagues-section">
             <div className="section-heading">
               <div>

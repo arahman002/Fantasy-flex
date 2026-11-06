@@ -42,3 +42,9 @@ Deploy the `dist` directory to any static host. Set the two public environment v
 - With Supabase configured, verify signup confirmation, sign-in, session restoration after refresh, and sign-out. Check invalid credentials and network failure feedback.
 - Create a real league, refresh, and verify it persists. With a second account, confirm the first account's leagues are absent. Test direct API reads and mutations with both tokens to validate database policies.
 - Test keyboard navigation, dialog Escape dismissal and focus return, empty search results, and an account with no leagues.
+
+## ESPN scores and stats
+
+The dashboard includes NFL, NBA, MLB, and NHL scoreboards from ESPN's public browser-accessible feed. Game scores, status, and player leader statistics (when supplied by ESPN) refresh every 60 seconds while the page is visible. The panel shows up to six games, prioritizing in-progress games, and links to the full ESPN scoreboard. The feed's default schedule window varies by sport (for example, the current NFL week).
+
+A failed refresh retains the last successfully loaded scores with an explicit stale-data warning. Switching sports clears the previous sport's data. Empty schedules and unavailable feeds have separate states; demo leagues never substitute fake ESPN stats. This is a polling scoreboard, not a guaranteed real-time or licensed fantasy scoring feed. The ESPN endpoint is undocumented and its availability, schema, and browser CORS access can change. No ESPN credentials or paid subscription are configured.
